@@ -16,5 +16,6 @@ async def on_ready():
 async def on_message(message):
     if message.content.startswith('Yeet')
     msg = 'Yeet'.format(message)
+    await client.send_message(message.channel, msg)
 
 client.run(os.getenv('TOKEN'))
